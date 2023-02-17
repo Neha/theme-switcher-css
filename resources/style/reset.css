@@ -1,0 +1,128 @@
+/* basic reset */
+:root{
+    --font-family: arial, sans-serif;
+    --background-color: #eee;
+    --primary-color:#000;
+    --secondary-color:#6d6d6d;
+    --background-secondary-color:#fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color:var(--secondary-color);
+    width: 1000px;
+    margin: 10px auto;
+    font-size: 18px;
+    
+}
+
+legend{
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+fieldset{
+    border: 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline;
+    margin-bottom:30px;
+}
+
+fieldset > label {
+    padding-right:10px;
+}
+
+h1{
+    font-size: 42px;
+    color:var(--primary-color);
+}
+
+h1 + p{
+    margin-top: 20px;
+    line-height: 28px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+section > div{
+    border-radius: 10px;
+    background: var(--background-secondary-color);
+    padding: 10px;
+    border-top: 5px solid #000;
+    display: inline-block;
+    width: 300px;
+    margin: 15px 0;
+    margin-right: 10px;
+    box-sizing: border-box;
+    min-height: 200px;
+    color: var(--primary-color);
+}
+
+section > div p {
+    font-size: 14px;
+    color: var(--secondary-color);
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+section > div:last-child{
+    margin-right: 0;
+}
+
+input[type=radio]{
+    appearance: none;
+    outline:2px solid var( --primary-color);
+    outline-offset: 3px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;  
+    margin-right: 10px; 
+}
+
+input[type=radio]:last-child{
+    margin-right: 0; 
+}
+
+label{
+    padding-right: 5px;
+}
+
+label[for=pink]{
+    color: pink;
+}
+
+label[for=blue]{
+    color: blue;
+}
+
+input[type=radio]:checked{
+    background-color: var(--background-color);
+}
+
+:root:has(#pink:checked){
+    --primary-color:rgb(87, 30, 39); 
+    --secondary-color:rgb(159, 119, 126); 
+    --background-color:rgb(255, 232, 236);
+    --background-secondary-color:pink;
+}
+
+
+:root:has(#blue:checked){
+    --primary-color:blue;
+    --secondary-color:rgb(37, 37, 110); 
+    --background-color:rgb(210, 210, 246);
+    --background-secondary-color:rgb(229, 229, 243);
+}
